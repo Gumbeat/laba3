@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+
+<div class="container center wrapper">
+    <div class="row"> 
+
+        {% if group %}
+
+            <h2>Вы пользователь группы {{ group.name }} </h2>
+        
+        {% else %}
+        
+            <h2> К сожалению пользователь не найден :( </h2>
+        
+        {% endif %}
+
+    </div>
+</div>
+
+
+{% endblock %}
+
+<style type="text/css">
+
+    .wrapper {
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+    }
+
+</style>

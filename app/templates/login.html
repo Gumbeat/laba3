@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="wrapper">
+        <form class="form-signin" method="POST" action="/login/">      
+          {% csrf_token %}
+           
+          <h2 class="form-signin-heading">Авторизация</h2>
+
+          <input type="text" class="form-control" name="username" placeholder="Имя пользователя" required="" autofocus="" />
+          <input type="password" class="form-control" name="password" placeholder="Пароль" required=""/>      
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Подтвердить</button>
+        </form>
+</div>
+
+{% endblock %}
